@@ -1,4 +1,13 @@
 site_name: Knowledgedatabase
+theme:
+  name: material
+  palette: 
+    scheme: slate
+    primary: indigo
+  features:
+    - navigation.tabs
+    - search.suggest
+    - content.code.copy
 
 nav:
   - Home: index.md
