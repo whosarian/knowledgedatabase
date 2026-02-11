@@ -1,6 +1,6 @@
-# Welcome to MkDocs
+# Welcome to Arians Knowledgedatabase
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+I can't guarantee the accuracy of all the information given.
 
 ## Commands
 
