@@ -1,0 +1,7 @@
+site_name: Knowledgedatabase
+
+nav:
+  - Home: index.md
+  - Linux:
+    - Basic Commands: linux/basic_commands.md
+    - Storage Stack: linux/storage_stack.md
