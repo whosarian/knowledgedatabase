@@ -8,6 +8,8 @@ theme:
     - navigation.tabs
     - search.suggest
     - content.code.copy
+markdown_extensions:
+  - attr_list
 
 nav:
   - Home: index.md
