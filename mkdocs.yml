@@ -21,6 +21,8 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Basics:
+    - Certificates: basics/certs.md
   - Linux:
     - Basic Commands: linux/basic_commands.md
     - Storage Stack: linux/storage_stack.md
