@@ -11,11 +11,18 @@ theme:
 markdown_extensions:
   - attr_list
   - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lan : true
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
 
 nav:
   - Home: index.md
   - Linux:
     - Basic Commands: linux/basic_commands.md
     - Storage Stack: linux/storage_stack.md
+  - Powershell: powershell.md
