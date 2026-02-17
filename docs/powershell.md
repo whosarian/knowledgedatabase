@@ -179,7 +179,7 @@ Enable-PSRemoting
 3. `Enter-PSSession`: Enter a session on remote
 3. `New-PSSession`: Create a session on remote
 
-!!! warning "The execution policy on the local system has to allow execution. On remote it doesnt matter.
+!!! warning "The execution policy on the local system has to allow execution. On remote it doesnt matter."
 
 ## Execution policies
 
