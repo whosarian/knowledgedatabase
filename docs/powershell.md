@@ -44,7 +44,7 @@ Get-WinEvent -LogName system -MaxEvents 10 | Format-List -Property TimeCreated ,
 !!! danger "Only the following may be formatted:"
   - Display on screen
   - Print
-  - Redirect to a text file"
+  - Redirect to a text file
 
 Steps such as subsequent sorting, filtering, redirection to a `.csv` file, etc. are not possbile because format commands send graphical control instruction. The object structure is resolved.
 
@@ -126,3 +126,63 @@ This Command includes:
 ```ps1
 Get-Process | Where-Object -FilterScript {$_.WorkingSet -gt 50mb -and $_.CPU -gt 100}
 ```
+
+## Modules
+
+Modules are tools that mainly focus on one topic. A Module is also a script, so the execution must be allowed. They are loaded automatically if a command from the module is executed.
+
+*Example 1: Display the modules of the current session*
+
+```ps1
+Get-Module
+```
+
+*Example 2: Display available modules*
+```ps1
+Get-Module -ListAvailable
+```
+
+*Example 3: Shows the directory from which modules are loaded*
+```ps1
+(Get-ChildItem -Path Env:\\PSModulePath).value -split ";"
+```
+
+!!! danger "PS 5 and PS 7 are not always able to use everything. This must be taken into account when choosing the storage location for the module.
+
+*Example 4: Create new module as tool collection*
+
+```ps1
+function Get-DCFunction {
+    Invoke-Command -ComputerName lon-dc1 -ScriptBlock {Get-Service -Name ntds, dns}
+}
+
+function Get-DisabledAccount {
+    Search-ADAccount -AccountDisabled | Format-Table -Property Samaccountname
+}
+```
+
+This uses the Powershell ISE. The file is saved in a new directory with the file extension `.psm1` under `C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\Modules`.  
+The module name must match the name of the folder it is located in. The defined functions can then be easily called in Powershell.
+
+## Remote administration
+
+There are 3 ways to access remote systems. Server are listening on default. Clients must be opened up.
+
+```ps1
+Enable-PSRemoting
+```
+
+!!! tip "Parameters and commands"
+
+1. `-ComputerName`: Access a specific system
+2. `Invoke-Command`
+3. `Enter-PSSession`: Enter a session on remote
+3. `New-PSSession`: Create a session on remote
+
+!!! warning "The execution policy on the local system has to allow execution. On remote it doesnt matter.
+
+## Execution policies
+
+Determine whether scripts are allowed to run, or whether they require a digital signature.  
+
+!!! tip "Initial settings: Clients - Restricted; Servers - Remote Signed"
