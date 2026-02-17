@@ -1,17 +1,14 @@
 # Powershell
 
-## Common operations
-
-!!! tip "
-  - `eq`: equal
-  - `ne`: not equal
-  - `gt`: greater than
-  - `ge`: greater or equal
-  - `lt`: less than
-  - `le`: less or equal
-  - `match`: for regex
-  - `like`
-"
+!!! tip "Common Operations"
+  * `eq`: equal
+  * `ne`: not equal
+  * `gt`: greater than
+  * `ge`: greater or equal
+  * `lt`: less than
+  * `le`: less or equal
+  * `match`: for regex
+  * `like`
 
 ## What if
 
@@ -44,7 +41,7 @@ This command includes:
 ```ps1
 Get-WinEvent -LogName system -MaxEvents 10 | Format-List -Property TimeCreated , Message
 ```
-!!! danger "Only the following may be formatted:
+!!! danger "Only the following may be formatted:"
   - Display on screen
   - Print
   - Redirect to a text file"
