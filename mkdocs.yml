@@ -23,6 +23,7 @@ nav:
   - Home: index.md
   - Basics:
     - Certificates: basics/certs.md
+    - Regular Expressions: basics/regex.de
   - Linux:
     - Basic Commands: linux/basic_commands.md
     - Storage Stack: linux/storage_stack.md
