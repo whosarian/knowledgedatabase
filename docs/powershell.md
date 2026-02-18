@@ -127,7 +127,7 @@ This Command includes:
 * `.`: Binds the current object to the attribute being queried in order to determine a numerical value
 * `-gt`: "greater than" (>)
 
-### Example 2; Display all processes that are using more than 50 MB RAM and more than 100 seconds CPU time
+### Example 2: Display all processes that are using more than 50 MB RAM and more than 100 seconds CPU time
 
 ```ps1
 Get-Process | Where-Object -FilterScript {$_.WorkingSet -gt 50mb -and $_.CPU -gt 100}
