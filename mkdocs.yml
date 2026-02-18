@@ -24,6 +24,7 @@ nav:
   - Basics:
     - Certificates: basics/certs.md
     - Regular Expressions: basics/regex.md
+    - Firewall: basics/firewall.md
   - Linux:
     - Basic Commands: linux/basic_commands.md
     - Storage Stack: linux/storage_stack.md
