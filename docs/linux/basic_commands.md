@@ -1,6 +1,7 @@
 # Basic Linux Commands
 
 ## System status & resources
+
 - `top`/`htop`: Displays running processes, CPU and RAM usage in realtime
 - `df` (Disk free): Shows free storage capacity on mounted filesystems
   - `h`: Human readable
@@ -13,6 +14,7 @@
 - `uptime`: Displays the current uptime of the system and all logged in users
 
 ## Processmanagement & services
+
 - `kill`/`pkill`: Kills processes
   - `kill <PID>`: Sends `SIGTERM`
   - `kill -9 <PID>`: Sends `SIGKILL`
@@ -23,6 +25,7 @@
   - `systemctl enable <service>`
 
 ## Logs and text processing
+
 - `tail`: Displays the end of a file
   - `-f`: Stays open and displays new lines live
   - `-i`: ignore uppercase/lowercase
@@ -32,6 +35,7 @@
   - `STRG+R`: Start inverted search in terminal
 
 ## Network
+
 - `ip a`: Shows all IP's and interfaces
 - `ss`: Displays open ports and sockets
   - `tulpn`
@@ -41,6 +45,7 @@
   - `-L`: Follows redirects
 
 ## Permissions & users
+
 - `chmod`: Change read/write/execute permissions
   - `-R`: Recurse
 - `chown`: Change owner
@@ -48,6 +53,7 @@
   - `-i`: permanent root shell
 
 ## Files & archives
+
 - `find`: Find files
   - `-name "*.log"`: Files that end on `".log"`
   - `-mtime +7`: Files that are older than 7 days
@@ -60,4 +66,5 @@
   - `x`: Extract
 
 ## Man-pages
+
 - `man <command>`: Opens manual

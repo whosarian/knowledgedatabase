@@ -37,6 +37,7 @@ openssl s_client -connect elastic-node:9200 -showcerts
 ```
 
 Check if key and cert belong together:
+
 ```sh
 openssl x509 -noout -modulus -in server.crt | openssl md5
 openssl rsa -noout -modulus -in server.key | openssl md5
