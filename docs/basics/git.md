@@ -68,4 +68,4 @@ Gitflow is a branching model that uses the following branches:
 - `feature`: Temporary branches to develop new features
 - `release`: Branches to prepare releases
 
-![GitFlow](/docs/images/gitflow.svg)
+![GitFlow](../images/gitflow.svg)
