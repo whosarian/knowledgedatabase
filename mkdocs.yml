@@ -25,6 +25,10 @@ nav:
     - Certificates: basics/certs.md
     - Regular Expressions: basics/regex.md
     - Firewall: basics/firewall.md
+  - Ansible:
+    - Basics: ansible/ansible_basics.md
+    - Inventory: ansible/ansible_inventory.md
+    - Ansible Lint: ansible/ansible_lint.md
   - Linux:
     - Basic Commands: linux/basic_commands.md
     - Storage Stack: linux/storage_stack.md
