@@ -22,6 +22,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Basics:
+    - Git: basics/git.md
     - Certificates: basics/certs.md
     - Regular Expressions: basics/regex.md
     - Firewall: basics/firewall.md
