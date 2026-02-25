@@ -14,21 +14,20 @@
 
 /* --- Syntax Highlighting im Gruvbox-Style --- */
 
-/* Erzwungener Gruvbox Code-Stil */
-[data-md-color-scheme="slate"] .highlight,
-[data-md-color-scheme="slate"] code {
-  background-color: #1d2021 !important; 
-  color: #ebdbb2 !important;
+/* Erzwungener Gruvbox-Stil für alle Code-Container */
+[data-md-color-scheme="slate"] .md-typeset .highlight,
+[data-md-color-scheme="slate"] .md-typeset pre,
+[data-md-color-scheme="slate"] .md-typeset code {
+    background-color: #1d2021 !important;
+    color: #ebdbb2 !important;
 }
 
-/* Syntax-Farben mit höherer Priorität */
-[data-md-color-scheme="slate"] .highlight .k { color: #fb4934 !important; } /* Keywords */
-[data-md-color-scheme="slate"] .highlight .s { color: #b8bb26 !important; } /* Strings */
-[data-md-color-scheme="slate"] .highlight .n { color: #ebdbb2 !important; } /* Namen */
-[data-md-color-scheme="slate"] .highlight .m { color: #d3869b !important; } /* Zahlen */
-[data-md-color-scheme="slate"] .highlight .comment { color: #928374 !important; font-style: italic !important; } 
-[data-md-color-scheme="slate"] .highlight .nb { color: #fabd2f !important; } /* Built-ins */
-[data-md-color-scheme="slate"] .highlight .nf { color: #8ec07c !important; } /* Funktionen */
+/* Syntax-Farben innerhalb der Material-Struktur */
+[data-md-color-scheme="slate"] .md-typeset .highlight .k { color: #fb4934 !important; } /* Keywords */
+[data-md-color-scheme="slate"] .md-typeset .highlight .s { color: #b8bb26 !important; } /* Strings */
+[data-md-color-scheme="slate"] .md-typeset .highlight .m { color: #d3869b !important; } /* Numbers */
+[data-md-color-scheme="slate"] .md-typeset .highlight .nf { color: #8ec07c !important; } /* Functions */
+[data-md-color-scheme="slate"] .md-typeset .highlight .c1 { color: #928374 !important; font-style: italic !important; } /* Comments */
 
 /* Zeilennummern */
 .highlight .linenos {
