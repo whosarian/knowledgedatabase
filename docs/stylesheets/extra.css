@@ -10,25 +10,27 @@
 
   /* Akzentfarbe (Sanftes Gelb) */
   --md-accent-fg-color:           #fabd2f;
+
+  --md-code-bg-color: #1d2021;
+  --md-code-fg-color: #ebdbb2;
+
+  --md-code-hl-keyword-color: #fb4934;   /* Rot: Keywords (- name, hosts) */
+  --md-code-hl-string-color: #b8bb26;    /* Grün: Strings ("Build webserver") */
+  --md-code-hl-number-color: #d3869b;    /* Purpur: Zahlen */
+  --md-code-hl-name-color: #ebdbb2;      /* Beige: Standard-Namen */
+  --md-code-hl-operator-color: #eb8b4b;  /* Orange: Operatoren */
+  --md-code-hl-punctuation-color: #a89984; /* Grau: Punktuation (: , [ ]) */
+  --md-code-hl-comment-color: #928374;   /* Dunkelgrau: Kommentare */
+  --md-code-hl-function-color: #8ec07c;  /* Aqua: Funktionen/Module */
+  --md-code-hl-variable-color: #83a598;  /* Blau: Variablen */
+
+  /* Speziell für YAML/Ansible (dein Screenshot zeigt .nt für Keys) */
+  --md-code-hl-key-color: #fb4934;
 }
 
-/* --- Syntax Highlighting im Gruvbox-Style --- */
-
-/* Erzwungener Gruvbox-Stil für alle Code-Container */
-[data-md-color-scheme="slate"] .md-typeset .highlight,
-[data-md-color-scheme="slate"] .md-typeset pre,
-[data-md-color-scheme="slate"] .md-typeset code {
-    background-color: #1d2021 !important;
-    color: #ebdbb2 !important;
+[data-md-color-scheme="slate"] .md-typeset .highlight .nt {
+    color: #fb4934 !important;
 }
-
-/* Syntax-Farben innerhalb der Material-Struktur */
-[data-md-color-scheme="slate"] .md-typeset .highlight .k { color: #fb4934 !important; } /* Keywords */
-[data-md-color-scheme="slate"] .md-typeset .highlight .s { color: #b8bb26 !important; } /* Strings */
-[data-md-color-scheme="slate"] .md-typeset .highlight .m { color: #d3869b !important; } /* Numbers */
-[data-md-color-scheme="slate"] .md-typeset .highlight .nf { color: #8ec07c !important; } /* Functions */
-[data-md-color-scheme="slate"] .md-typeset .highlight .c1 { color: #928374 !important; font-style: italic !important; } /* Comments */
-
 /* Zeilennummern */
 .highlight .linenos {
   background-color: #282828;
