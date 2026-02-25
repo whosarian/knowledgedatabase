@@ -30,6 +30,7 @@ nav:
     - Basics: ansible/ansible_basics.md
     - Inventory: ansible/ansible_inventory.md
     - Roles: ansible/ansible_roles.md
+    - Variables: ansible/ansible_variables.md
     - Vault: ansible/ansible_vault.md
     - Ansible Lint: ansible/ansible_lint.md
   - Linux:
