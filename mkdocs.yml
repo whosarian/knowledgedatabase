@@ -3,8 +3,8 @@ theme:
   name: material
   palette: 
     scheme: slate
-    primary: orange
-    accent: yellow
+    primary: custom
+    accent: custom
   features:
     - navigation.tabs
     - search.suggest
