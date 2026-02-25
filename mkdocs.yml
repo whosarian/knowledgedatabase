@@ -29,6 +29,7 @@ nav:
   - Ansible:
     - Basics: ansible/ansible_basics.md
     - Inventory: ansible/ansible_inventory.md
+    - Roles: ansible/ansible_roles.md
     - Ansible Lint: ansible/ansible_lint.md
   - Linux:
     - Basic Commands: linux/basic_commands.md
