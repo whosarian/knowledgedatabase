@@ -14,20 +14,21 @@
 
 /* --- Syntax Highlighting im Gruvbox-Style --- */
 
-/* Hintergrund des Code-Blocks */
-.highlight {
+/* Erzwungener Gruvbox Code-Stil */
+[data-md-color-scheme="slate"] .highlight,
+[data-md-color-scheme="slate"] code {
   background-color: #1d2021 !important; 
-  color: #ebdbb2;
+  color: #ebdbb2 !important;
 }
 
-/* Spezifische Code-Farben (Pastell-Töne) */
-.highlight .k { color: #fb4934; } /* Keywords: Rötlich */
-.highlight .s { color: #b8bb26; } /* Strings: Grünlich */
-.highlight .n { color: #ebdbb2; } /* Namen: Beige */
-.highlight .m { color: #d3869b; } /* Zahlen: Purpur */
-.highlight .comment { color: #928374; font-style: italic; } /* Kommentare */
-.highlight .nb { color: #fabd2f; } /* Built-ins: Gelb */
-.highlight .nf { color: #8ec07c; } /* Funktionen: Aqua/Grün */
+/* Syntax-Farben mit höherer Priorität */
+[data-md-color-scheme="slate"] .highlight .k { color: #fb4934 !important; } /* Keywords */
+[data-md-color-scheme="slate"] .highlight .s { color: #b8bb26 !important; } /* Strings */
+[data-md-color-scheme="slate"] .highlight .n { color: #ebdbb2 !important; } /* Namen */
+[data-md-color-scheme="slate"] .highlight .m { color: #d3869b !important; } /* Zahlen */
+[data-md-color-scheme="slate"] .highlight .comment { color: #928374 !important; font-style: italic !important; } 
+[data-md-color-scheme="slate"] .highlight .nb { color: #fabd2f !important; } /* Built-ins */
+[data-md-color-scheme="slate"] .highlight .nf { color: #8ec07c !important; } /* Funktionen */
 
 /* Zeilennummern */
 .highlight .linenos {
