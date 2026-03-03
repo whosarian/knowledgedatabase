@@ -17,7 +17,7 @@ Create a folder named `filter_plugins/` on the root directory of your playbook o
 
 Example: A plugin that reverts the text.
 
-```py
+```python
 #!/usr/bin/python
 
 class FilterModule(object):
@@ -47,7 +47,7 @@ Create a folder named `library/` in the root directory of your playbook or role.
 
 Example:
 
-```py
+```python
 #!/usr/bin/python
 from ansible.module_utils.basic import AnsibleModule
 
