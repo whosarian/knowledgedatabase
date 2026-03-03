@@ -35,4 +35,4 @@ images:
     name: quay.io/ansible/ansible-runner:latest
 ```
 
-Using `ansible-builder build -t ansible_container` the image is build on your local maschine.
+Using `ansible-builder build -t ansible_container` the image is build on your local machine.
