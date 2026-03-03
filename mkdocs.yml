@@ -37,6 +37,7 @@ nav:
     - Vault: ansible/ansible_vault.md
     - Ansible Lint: ansible/ansible_lint.md
     - Execution Environments: ansible/ansible_execution_environments.md
+    - Writing Extensions: ansible/ansible_writing_extensions.md
   - Linux:
     - Basic Commands: linux/basic_commands.md
     - Storage Stack: linux/storage_stack.md
