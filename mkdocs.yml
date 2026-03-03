@@ -36,6 +36,7 @@ nav:
     - Variables: ansible/ansible_variables.md
     - Vault: ansible/ansible_vault.md
     - Ansible Lint: ansible/ansible_lint.md
+    - Execution Environments: ansible/ansible_execution_environments.md
   - Linux:
     - Basic Commands: linux/basic_commands.md
     - Storage Stack: linux/storage_stack.md
