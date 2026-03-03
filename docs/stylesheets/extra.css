@@ -39,14 +39,14 @@
 }
 
 [data-md-color-scheme="slate"] .md-typeset h2 {
-  color: #ffd981;
+  color: #ffe4a5;
 }
 
 [data-md-color-scheme="slate"] .md-typeset h3 {
-  color: #eac5f8; 
+  color: #c2f5cf; 
 }
 [data-md-color-scheme="slate"] .md-typeset h4 {
-  color: #c2f5cf;
+  color: #c8d4fa;
 }
 /* Zeilennummern */
 .highlight .linenos {
