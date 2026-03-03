@@ -35,18 +35,18 @@
 }
 /* Gilt für den dunklen Modus (Slate) */
 [data-md-color-scheme="slate"] .md-typeset h1 {
-  color: #ffc7a2;
+  color: #eb8b4b;
 }
 
 [data-md-color-scheme="slate"] .md-typeset h2 {
-  color: #ffe4a5;
+  color: #ffd36d;
 }
 
 [data-md-color-scheme="slate"] .md-typeset h3 {
-  color: #c2f5cf; 
+  color: #fc878d; 
 }
 [data-md-color-scheme="slate"] .md-typeset h4 {
-  color: #c8d4fa;
+  color: #90aaff;
 }
 /* Zeilennummern */
 .highlight .linenos {
