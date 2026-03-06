@@ -43,4 +43,5 @@ nav:
   - Linux:
     - Basic Commands: linux/basic_commands.md
     - Storage Stack: linux/storage_stack.md
+    - RHEL System Administration: linux/rhel_system_administration.md
   - Powershell: powershell.md
