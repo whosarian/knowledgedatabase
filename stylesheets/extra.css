@@ -1,0 +1,56 @@
+[data-md-color-scheme="slate"] {
+  /* Hintergrund & Text (Dezent / Pastell) */
+  --md-default-bg-color:          #282828; 
+  --md-default-fg-color:          #ebdbb2; 
+  
+  /* Das "sanfte" Gruvbox-Orange (Pastell-Look) */
+  --md-primary-fg-color:          #eb8b4b; 
+  --md-primary-fg-color--dark:    #ec946b;
+  --md-primary-bg-color:          #3c3836; /* Dunklerer Header-Hintergrund */
+
+  /* Akzentfarbe (Sanftes Gelb) */
+  --md-accent-fg-color:           #fabd2f;
+
+  --md-code-bg-color: #1d2021;
+  --md-code-fg-color: #ebdbb2;
+
+  --md-code-hl-keyword-color: #ee6656;   /* Rot: Keywords (- name, hosts) */
+  --md-code-hl-string-color: #78eb95;    /* Grün: Strings ("Build webserver") */
+  --md-code-hl-number-color: #db91bf;    /* Purpur: Zahlen */
+  --md-code-hl-name-color: #ebdbb2;      /* Beige: Standard-Namen */
+  --md-code-hl-operator-color: #eb8b4b;  /* Orange: Operatoren */
+  --md-code-hl-punctuation-color: #a89984; /* Grau: Punktuation (: , [ ]) */
+  --md-code-hl-comment-color: #928374;   /* Dunkelgrau: Kommentare */
+  --md-code-hl-function-color: #8ec07c;  /* Aqua: Funktionen/Module */
+  --md-code-hl-variable-color: #83a598;  /* Blau: Variablen */
+  --md-code-hl-special-color: #ca95df;   /* Lila: Spezielle Schlüsselwörter */
+  --md-code-hl-constant-color: #ca95df;  /* Lila: Konstanten */
+
+  /* Speziell für YAML/Ansible (dein Screenshot zeigt .nt für Keys) */
+  --md-code-hl-key-color: #ee6656;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .nt {
+    color: #ee6656 !important;
+}
+/* Gilt für den dunklen Modus (Slate) */
+[data-md-color-scheme="slate"] .md-typeset h1 {
+  color: #eb8b4b;
+}
+
+[data-md-color-scheme="slate"] .md-typeset h2 {
+  color: #ffd36d;
+}
+
+[data-md-color-scheme="slate"] .md-typeset h3 {
+  color: #fc878d; 
+}
+[data-md-color-scheme="slate"] .md-typeset h4 {
+  color: #90aaff;
+}
+/* Zeilennummern */
+.highlight .linenos {
+  background-color: #282828;
+  color: #665c54;
+  border-right: 1px solid #3c3836;
+}
