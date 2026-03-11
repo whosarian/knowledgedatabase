@@ -62,15 +62,15 @@ There are mainly three ways to call a role in your playbook.
 
 Using `import_role` the role is fully read and checked when the playbook starts.
 
-!!! tip "Advantages:"
+!!! tip "Advantages:
 
 - **Error detection**: Syntax errors are detected when starting the playbook
 - **Visibility**: When using the command `ansible-playbook site.yml --list-tasks` you see every task inside an imported role
-- **Tags**: A tag on the import task provides the tag to every task of the role
+- **Tags**: A tag on the import task provides the tag to every task of the role"
 
-!!! danger "Disadvantages:"
+!!! danger "Disadvantages:
 
-- Loops (`loop`, `with_items`) and `import_role` are not compatible. That simply doesn't work, because Ansible doesn't know the variables when reading then in before starting
+- Loops (`loop`, `with_items`) and `import_role` are not compatible. That simply doesn't work, because Ansible doesn't know the variables when reading then in before starting"
 
 Example:
 

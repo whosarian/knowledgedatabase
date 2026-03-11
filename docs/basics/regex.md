@@ -1,6 +1,6 @@
 # Regular Expressions
 
-!!! tip "Important tokens"
+## Important tokens
 
 - `.`: Joker: Any symbol
 - `^`: Beginning of the line
@@ -32,6 +32,6 @@ Dates: `\d{2}\.\d{2}\.\d{4}`
 
 1. `\d{2}`: Day (two digits)
 2. `\.`: Dot
-3. `\d{2}\: Month (two digits)
+3. `\d{2}\` : Month (two digits)
 4. `\.`: Dot
 5. `\d{4}`: Year (four digits)
