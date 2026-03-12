@@ -62,15 +62,13 @@ There are mainly three ways to call a role in your playbook.
 
 Using `import_role` the role is fully read and checked when the playbook starts.
 
-!!! tip "Advantages:
+!!! tip "Advantages:"
+    - **Error detection**: Syntax errors are detected when starting the playbook
+    - **Visibility**: When using the command `ansible-playbook site.yml --list-tasks` you see every task inside an imported role
+    - **Tags**: A tag on the import task provides the tag to every task of the role
 
-- **Error detection**: Syntax errors are detected when starting the playbook
-- **Visibility**: When using the command `ansible-playbook site.yml --list-tasks` you see every task inside an imported role
-- **Tags**: A tag on the import task provides the tag to every task of the role"
-
-!!! danger "Disadvantages:
-
-- Loops (`loop`, `with_items`) and `import_role` are not compatible. That simply doesn't work, because Ansible doesn't know the variables when reading then in before starting"
+!!! danger "Disadvantages:"
+    - Loops (`loop`, `with_items`) and `import_role` are not compatible. That simply doesn't work, because Ansible doesn't know the variables when reading then in before starting
 
 Example:
 
@@ -86,14 +84,12 @@ tasks:
 Using `include_role`, Ansible doesn't know what's in that role when the playbook starts. It only finds out when the task is executed.
 
 !!! tip "Advantages:"
-
-- **Loops**: You can call a role multiple times with different variables
-- **Dynamic variables**: You can use variables that were created in a task immediately before it
+    - **Loops**: You can call a role multiple times with different variables
+    - **Dynamic variables**: You can use variables that were created in a task immediately before it
 
 !!! danger "Disadvantages:"
-
-- **Hidden errors**: A typo in the role only becomes apparent when Ansible reaches that exact point. If the playbook spends an hour installing servers beforehand, it only aborts at the very end
-- **Invisible**: Using `--list-tasks` only the `include_role`-task is displayed, not the tasks inside
+    - **Hidden errors**: A typo in the role only becomes apparent when Ansible reaches that exact point. If the playbook spends an hour installing servers beforehand, it only aborts at the very end
+    - **Invisible**: Using `--list-tasks` only the `include_role`-task is displayed, not the tasks inside
 
 Example:
 
