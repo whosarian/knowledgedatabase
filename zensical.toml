@@ -44,10 +44,34 @@ Copyright &copy; 2026 The authors
 # can be defined using TOML syntax.
 #
 # Read more: https://zensical.org/docs/setup/navigation/
-# nav = [
-#   { "Get started" = "index.md" },
-#   { "Markdown in 5min" = "markdown.md" },
-# ]
+nav = [
+  { "Home" = "index.md" },
+  { "Basics" = [
+    "basics/certs.md",
+    "basics/firewall.md",
+    "basics/git.md",
+    "basics/networking.md",
+    "basics/regex.md"
+  ]},
+  { "Linux" = [
+    "linux/basic_commands.md",
+    "linux/storage_stack.md",
+    "linux/rhel_system_administration.md",
+    "linux/security_and_compliance.md"
+  ]},
+  { "Ansible" = [
+    "ansible/ansible_basics.md",
+    "ansible/ansible_inventory.md",
+    "ansible/ansible_roles.md",
+    "ansible/ansible_variables.md",
+    "ansible/ansible_writing_extensions.md",
+    "ansible/ansible_lint.md",
+    "ansible/ansible_vault.md",
+    "ansible/ansible_molecule.md",
+    "ansible/ansible_execution_environments.md"
+  ]},
+    { "Powershell" = "powershell.md" }
+]
 
 # With the "extra_css" option you can add your own CSS styling to customize
 # your Zensical project according to your needs. You can add any number of
