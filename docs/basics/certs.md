@@ -1,11 +1,10 @@
 # Certificates
 
 !!! tip "Symmetrical vs. Asymmetrical"
-
-| Symmetrical | Asymmetrical |
-| ----------- | ------------ |
-| 1 key for de- and encryption | Key pair |
-| very fast | Public and private key |
+    | Symmetrical | Asymmetrical |
+    | ----------- | ------------ |
+    | 1 key for de- and encryption | Key pair |
+    | very fast | Public and private key |
 
 ## Chain of trust
 

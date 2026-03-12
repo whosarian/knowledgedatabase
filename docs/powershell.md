@@ -1,15 +1,14 @@
 # Powershell
 
 !!! tip "Common Operations"
-
-* `eq`: equal
-* `ne`: not equal
-* `gt`: greater than
-* `ge`: greater or equal
-* `lt`: less than
-* `le`: less or equal
-* `match`: for regex
-* `like`
+    - `eq`: equal
+    - `ne`: not equal
+    - `gt`: greater than
+    - `ge`: greater or equal
+    - `lt`: less than
+    - `le`: less or equal
+    - `match`: for regex
+    - `like`
 
 ## What if
 
@@ -46,10 +45,9 @@ Get-WinEvent -LogName system -MaxEvents 10 | Format-List -Property TimeCreated ,
 ```
 
 !!! danger "Only the following may be formatted:"
-
-* Display on screen
-* Print
-* Redirect to a text file
+    - Display on screen
+    - Print
+    - Redirect to a text file
 
 Steps such as subsequent sorting, filtering, redirection to a `.csv` file, etc. are not possbile because format commands send graphical control instruction. The object structure is resolved.
 
@@ -181,11 +179,10 @@ Enable-PSRemoting
 ```
 
 !!! tip "Parameters and commands"
-
-1. `-ComputerName`: Access a specific system
-2. `Invoke-Command`
-3. `Enter-PSSession`: Enter a session on remote
-4. `New-PSSession`: Create a session on remote
+    1. `-ComputerName`: Access a specific system
+    2. `Invoke-Command`
+    3. `Enter-PSSession`: Enter a session on remote
+    4. `New-PSSession`: Create a session on remote
 
 !!! warning "The execution policy on the local system has to allow execution. On remote it doesnt matter."
 

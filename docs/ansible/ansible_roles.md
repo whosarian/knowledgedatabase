@@ -35,10 +35,9 @@ roles/
 ```
 
 !!! tip "This structure can be automatically created using `ansible-galaxy`."
-
-```bash
-ansible-galaxy role init new_role
-```
+    ```bash
+    ansible-galaxy role init new_role
+    ```
 
 ## Calling roles
 

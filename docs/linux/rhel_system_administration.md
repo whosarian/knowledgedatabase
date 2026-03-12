@@ -7,7 +7,9 @@
 ```bash
 whoami ; foo ; bar ; date
 ```
+
 Output:
+
 ```bash
 student
 bash: foo: command not found...
@@ -82,11 +84,10 @@ All files in a Linux system are stored in file systems organized in a single inv
 The root directory, indicated by a single forward slash (`/`), is the top level of the file system hierarchy. The forward slash (`/`) is also used as a directory separator in filenames.
 
 !!! note "The different content types of file system directories are described using the following terms:"
-
-- Static content remains unchanged unless explicitly modified or reconfigured.
-- Dynamic or variable content can be modified or added to by active processes.
-- Persistent content persists after a system restart.
-- Runtime content from a process or the system is deleted upon restart.
+    - Static content remains unchanged unless explicitly modified or reconfigured.
+    - Dynamic or variable content can be modified or added to by active processes.
+    - Persistent content persists after a system restart.
+    - Runtime content from a process or the system is deleted upon restart.
 
 ### Important directories in RHEL
 
