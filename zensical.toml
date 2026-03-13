@@ -54,9 +54,11 @@ nav = [
     "basics/regex.md"
   ]},
   { "Linux" = [
-    "linux/basic_commands.md",
+    "linux/basics.md",
+    "linux/filesystem.md",
+    "linux/command_line.md",
     "linux/storage_stack.md",
-    "linux/rhel_system_administration.md",
+    "linux/vim.md",
     "linux/security_and_compliance.md"
   ]},
   { "Ansible" = [
