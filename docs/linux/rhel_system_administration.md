@@ -269,3 +269,50 @@ Select text ranges in order to then delete (++d++), copy (++y++) or indent (++gr
 - The existing text to the right of the cursor is immediately overwritten (replaced) instead of being moved to the right.
 
 ## Redirecting outputs
+
+A running program or process reads input and writes output. Executing a command at the shell prompt typically reads the input from the keyboard and sends the output to the terminal window.
+
+A process uses numbered channels, called file descriptors, to receive input and send output. All processes start with at least three file descriptors:
+
+- Standard input (Channel 0): Reads the input
+- Standard output (Channel 1): Sends the output
+- Standard error: (Channel 2): Sendr error messages
+
+!!! note "The following table summarizes information about the file descriptors:"
+    | Number | Name | Description | Connection | Usage |
+    | --- | --- | --- | --- | --- |
+    | 0 | `stdin` | Standard input | Keyboard | Read-only |
+    | 1 | `stdout` | Standard output | Terminal | Write-only |
+    | 2 | `stderr` | Stanard error | Terminal | Write-only |
+    | 3 | `filename` | Other files | None | Read, write or both |
+
+### Operators
+
+| Operator | Description |
+| --- | --- |
+| `> FILE` | Redirect `stdout` to override a file |
+| `>> FILE` | Redirect `stdout` to append to a file |
+| `2> FILE` | Redirect `stderr` to override a file |
+| `2> /dev/null` | Discard `stderr` messages by redirecting them to `/dev/null` |
+| `> FILE 2>&1` or `&> FILE` | Redirect `stdout` and `stderr` to override the same file |
+| `>> FILE 2>&1` or `&>> FILE` | Redirect `stdout` and `stderr` to append to the same file |
+
+### Creating pipelines
+
+A pipeline is a sequence of one or more commands separated by the pipe character (`|`). A pipeline connects the standard output of the first command to the standard input of the next command.
+
+Pipelines allow one process to manipulate and format the output of another process before sending it to the terminal. Imagine data flowing through the pipeline from one process to another, being modified by each command it passes through.
+
+??? example "Examples"
+    ```bash
+    ls -l /usr/bin | less # The output of the `ls` command is redirected to the `less` command, so that each screen is displayed sequentially on the terminal
+    ```
+    ```bash
+    ls | wc -l # Output of the ls command to the wc -l command, which counts the number of lines received by the ls command and outputs the value to the terminal
+    ```
+    ```bash
+    ls -t | head -n 10 > /tmp/first-ten-changed-files # Output of the ls -t command to the head command to display the first 10 lines, with the final result redirected to the file /tmp/first-ten-changed-files
+    ```
+
+!!! info "Note"
+    When you combine redirection with a pipeline, the shell first sets up the entire pipeline and then forwards input/output. If output redirection is used in the middle of a pipeline, the output is directed to a file, not to the next command in the pipeline.
