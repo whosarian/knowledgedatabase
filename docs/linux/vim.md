@@ -32,7 +32,7 @@ Opens up a terminal at the bottom of the window.
 
 - ++colon++: To indicate the start of a command
 - ++slash++: Forwardsearch
-- ++question++: Backwardsearch
+- ++question++: Reverse search
 
 !!! tip "Important commands"
     | Command | Action |

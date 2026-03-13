@@ -11,13 +11,13 @@
 # The site_name is shown in the page header and the browser window title
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_name
-site_name = "Knowledgedatabase"
+site_name = "Knowledge Database"
 
 # The site_description is included in the HTML head and should contain a
 # meaningful description of the site content for use by search engines.
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_description
-site_description = "Arians Knowledgedatabase"
+site_description = "Arian's Knowledge Database"
 
 # The site_author attribute. This is used in the HTML head element.
 #
@@ -58,6 +58,7 @@ nav = [
     "linux/filesystem.md",
     "linux/command_line.md",
     "linux/storage_stack.md",
+    "linux/users_and_groups.md",
     "linux/vim.md",
     "linux/security_and_compliance.md"
   ]},
@@ -329,3 +330,7 @@ toggle.name = "Switch to light mode"
 #[[project.extra.social]]
 #icon = "fontawesome/brands/github"
 #link = "https://github.com/user/repo"
+
+# ----------------------------------------------------------------------------
+# Markdown Extensions configuration
+# ----------------------------------------------------------------------------

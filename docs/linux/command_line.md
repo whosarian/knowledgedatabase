@@ -7,14 +7,14 @@ When you type a command at the Bash shell prompt, the shell processes that comma
 Bash executes the following extensions:
 
 - Pathname expansion: allows one or more files to be selected to pattern matching
-- Paranthesis expansion: can generate multiple strings
+- Parenthesis expansion: can generate multiple strings
 - Tilde extension: extends to a path to a user directory
-- Variable extension: replaces text with the value stored in the varible
+- Variable extension: replaces text with the value stored in the variable
 - Command substitution: replaces text with the output of a command
 
 ### Pathname expansion
 
-Path name expansion, formerly known as globbing, is one of Bash's most useful features. Path name expansion uses wildcard characters. These are metacharacters that expand to match the searched file and path names. Therefore, commands can be applied to a specific number of files in a single execution.
+Path name expansion, formerly known as globbing, is one of Bash's most useful features. Path name expansion uses wildcard characters. These are meta characters that expand to match the searched file and path names. Therefore, commands can be applied to a specific number of files in a single execution.
 
 | Pattern | Matches |
 | --- | --- |
@@ -31,7 +31,7 @@ Path name expansion, formerly known as globbing, is one of Bash's most useful fe
 | `[[:digit:]]` | Any digit from 0 to 9 |
 | `[[:space:]]` | Every single empty space, including tabs, line breaks, paragraph ends, page feeds or spaces |
 
-### Paranthesis expansion
+### Parenthesis expansion
 
 Parenthesis expansion generates any arbitrary string. Parentheses contain a comma-separated list of strings or a sequence of expressions. The result includes the text before or after the parentheses definition. Parenthesis expansions using curly braces can be nested within each other.
 
@@ -48,7 +48,7 @@ A variable behaves like a named container in which a value is stored. Variables 
 You can assign data as a value to a variable using the following syntax:
 
 ```bash
-<VARIABLENAME> = value
+<VARIABLE> = value
 ```
 
 You can use variable expansion to convert the variable name on the command line to its value:
@@ -85,14 +85,14 @@ A process uses numbered channels, called file descriptors, to receive input and 
 
 - Standard input (Channel 0): Reads the input
 - Standard output (Channel 1): Sends the output
-- Standard error: (Channel 2): Sendr error messages
+- Standard error: (Channel 2): Sends error messages
 
 !!! note "The following table summarizes information about the file descriptors:"
     | Number | Name | Description | Connection | Usage |
     | --- | --- | --- | --- | --- |
     | 0 | `stdin` | Standard input | Keyboard | Read-only |
     | 1 | `stdout` | Standard output | Terminal | Write-only |
-    | 2 | `stderr` | Stanard error | Terminal | Write-only |
+    | 2 | `stderr` | Standard error | Terminal | Write-only |
     | 3 | `filename` | Other files | None | Read, write or both |
 
 ### Operators

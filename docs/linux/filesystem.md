@@ -32,7 +32,7 @@ You can create multiple filenames that point to the same file. These filenames a
 
 You can create two types of links: a hard link or a symbolic link (sometimes called a soft link). Each type of link is useful for different use cases.
 
-### Hardlinks
+### Hard links
 
 Every file begins with a single hard link from its original name to the data in the file system. When you create a hard link to a file, you create a different name that points to the same data. The new hard link behaves exactly like the original file name. Once created, you cannot tell the difference between the new hard link and the original file name.
 
@@ -45,6 +45,6 @@ To determine if two files are hard-linked, use the `ls` command with the `-i` op
 The `ln` command with the `-s` option creates a symbolic link, also known as a soft link. A symbolic link is not a regular file, but a special type of file that points to an existing file or directory.
 
 - Symbolic links can connect two files in different systems
-- Symbolic links can point to a directory or a specific file, in addition to a regual file
+- Symbolic links can point to a directory or a specific file, in addition to a regular file
 
 !!! tip "A symbolic link can point to a directory. The symbolic link then behaves like a directory. When you change to the symbolic link using the `cd` command, the current working directory becomes the linked directory."

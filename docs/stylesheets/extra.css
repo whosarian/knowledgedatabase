@@ -67,3 +67,16 @@
   background-color: #282828;
   border-right: 1px solid #3c3836;
 }
+
+/* Verstecke das alte Paragraphen-Zeichen */
+.headerlink {
+    font-size: 0 !important;
+}
+
+/* Setze die Kette als neues Zeichen dahinter */
+.headerlink::after {
+    content: "🔗";
+    font-size: 14px; /* Oder deine gewünschte Größe */
+    visibility: visible;
+    margin-left: 5px;
+}
