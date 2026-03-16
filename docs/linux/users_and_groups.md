@@ -54,3 +54,34 @@ su <username>
 ```
 
 you can switch to another user account. If no username is passed, the command tries to change to the `root`-user.
+
+## Managing user accounts
+
+### Creating a user
+
+``` mermaid
+graph TD
+    %% Zentrale Aktion
+    UA["# useradd username"]:::main
+
+    %% Dateien und Pfade
+    LOGIN["/etc/login.defs"]
+    SKEL["/etc/skel"]
+    HOME["/home/username"]
+    GROUP["/etc/group"]
+    PASSWD["/etc/passwd"]
+    SHADOW["/etc/shadow"]
+
+    %% Verbindungen mit Nummerierung
+    UA -->|2 read| LOGIN
+    UA -->|3 write| GROUP
+    UA -->|3 write| PASSWD
+    UA -->|3 write| SHADOW
+    UA -->|4 create| HOME
+    UA --> SKEL
+    SKEL -->|5 copy| HOME
+
+    %% Styling
+    classDef main fill:#fff,stroke:#007bff,stroke-width:2px;
+    style UA color:#000
+```
