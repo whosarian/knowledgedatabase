@@ -73,7 +73,8 @@ nav = [
     "ansible/ansible_molecule.md",
     "ansible/ansible_execution_environments.md"
   ]},
-  { "Powershell" = "powershell.md" }
+  { "Powershell" = "powershell.md" },
+  { "Hashicorp Vault" = "hashicorp_vault.md" }
 ]
 
 # With the "extra_css" option you can add your own CSS styling to customize
