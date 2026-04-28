@@ -30,7 +30,7 @@ The main point of Hashicorp Vault is the seal and unseal process. When a Vault s
 
 To unseal the Vault a defined number of people (threshold) must enter their parts of the key to reconstruct the master key.
 
-## Installation
+## Installation (on RHEL)
 
 ```bash
 sudo yum install -y yum-utils
@@ -79,10 +79,10 @@ vault operator init
 
 After that command you get:
 
-1. **Unseal keys**
+1. **Unseal keys** (usually 5)
 1. **Initial root token**
 
-!!! danger "Never save those keys on the same server."
+!!! danger "Never save those keys on the same server"
 
 Now you can unseal the vault using the following command (usually 3 times) and providing the different keys:
 
@@ -90,7 +90,7 @@ Now you can unseal the vault using the following command (usually 3 times) and p
 vault operator unseal
 ```
 
-After that you can login with the root token:
+After that you can login using the root token:
 
 ```bash
 vault login <ROOT_TOKEN>
