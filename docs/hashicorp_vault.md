@@ -1,6 +1,6 @@
-# Hashicorp Vault
+# HashiCorp Vault
 
-Hashicorp Vault is an identity-based system for secret management and protection of sensitive data. It serves as a central instance to save passwords, API-keys and certificates protected and to control and monitor the access on them.
+HashiCorp Vault is an identity-based system for secret management and protection of sensitive data. It serves as a central instance to save passwords, API-keys and certificates protected and to control and monitor the access on them.
 
 !!! warning "Without a centralized solution secrets are often written in configuration files, variables, repositories, ..."
 
@@ -95,3 +95,46 @@ After that you can login using the root token:
 ```bash
 vault login <ROOT_TOKEN>
 ```
+
+## Auth methods
+
+In HashiCorp authentication is strictly separated from authorization.
+
+- Authentication: Who are you? (auth method)
+- Authorization: What are you allowed to do? (policies)
+
+### Categories of auth methods
+
+#### Human users
+
+!!! tip "Those methods are optimized for logging in manually:"
+
+- Userpass: Easy username - password combination
+- LDAP / AD: Uses existing company data
+- GitHub: Authentication via a GitHub-Personal-Access-Token
+- OIDC: Login in Okta, Keycloak or Google
+
+#### Machines and applications
+
+!!! tip "Those methods are made for automatization:"
+
+- AppRole: Standard for machines consisting of a `RoleID` and a `SecretID`
+- Kubernetes: Pods authenticate via Service Account Token
+- Cloud-Native (AWS, Azure, GCP): The identity is checked with the Metadata-API of the cloud provider
+
+### Important concepts
+
+#### Mount points
+
+Every auth method is mounted to a path. Usually it is `auth/<name>` but you can also mount the same method to different paths.
+
+#### Token TTL (Time To Live)
+
+Every token that is generated through a auth method has a time to live.
+
+- Lease: The token is valid for X hours
+- Renewal: Many tokens can be expanded until a max TTL is reached
+
+#### Orphan Tokens
+
+Normally tokens are hierarchical (one token generates others). If the parent token dies, also the children die. But usually auth methods generate "Orphan Tokens" that are independent to a session.
