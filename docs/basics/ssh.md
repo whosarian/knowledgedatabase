@@ -24,5 +24,3 @@ SSH uses an asymmetric encryption for authentication and a symmetric encryption 
 The SSH-agent is a program that holds your private keys in the storage, so you don't have to type your passphrase every time.
 
 With agent forwarding you are able to use your local keys on a remote host to jump to another one without copying your private key on the host.
-
-
