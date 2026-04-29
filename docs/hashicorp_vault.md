@@ -136,3 +136,62 @@ Every token that is generated through a auth method has a time to live.
 #### Orphan Tokens
 
 Normally tokens are hierarchical (one token generates others). If the parent token dies, also the children die. But usually auth methods generate "Orphan Tokens" that are independent to a session.
+
+## Policies
+
+Vault policies are written in **HCL** and define paths and operations (capabilities) allowed on them. There are six main operations that can be granted through a policy:
+
+- **create**: Allows creation of data in a path
+- **read**: Allows reading of data
+- **update**: Allows changing existing data
+- **delete**: Allows deleting data
+- **list** Allows listing entries of a path
+- **deny**: Explicitly deny access
+
+### Useful policies
+
+??? example "App-Developer (read-only for app secrets)"
+
+    ```json
+    path "sys/mounts" {
+      capabilities = ["read", "list"]
+    }
+
+    path "secret/data/applications/frontend/production/*" {
+      capabilities = ["read"]
+    }
+
+    path "secret/metadata/applications/frontend/*" {
+      capabilities = ["list"]
+
+    }
+
+    ```
+
+??? example "Secrets-Manager (full access on data, no admin)"
+
+    ```json
+    path "secret/data/*" {
+      capabilities = ["create", "read", "update", "delete", "list"]
+    }
+
+    path "secret/metadata/*" {
+      capabilities = ["list", "read", "delete"]
+    }
+    ```
+
+??? example "Self-Service (standard for every user)"
+
+    ```json
+    path "auth/token/lookup-self" {
+      capabilities = ["read"]
+    }
+
+    path "auth/token/renew-self" {
+      capabilities = ["update"]
+    }
+
+    path "auth/token/revoke-self" {
+      capabilities = ["update"]
+    }
+    ```
