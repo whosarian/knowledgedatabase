@@ -16,13 +16,13 @@ Hashicorp Vault fixes the problem with replacing static secrets (that are valid 
 
 ## Important terms
 
-| Term | Description |
-| --- | --- |
-| Storage Backend | Place where the data is physically stored |
-| Auth Methods | Mechanisms with which the users can authenticate |
-| Secret Engines | Components that store or generate data |
-| Policies | Rules that define who can access which paths |
-| Tokens | The primary method to authenticate inside of Vault |
+| Term            | Description                                        |
+| --------------- | -------------------------------------------------- |
+| Storage Backend | Place where the data is physically stored          |
+| Auth Methods    | Mechanisms with which the users can authenticate   |
+| Secret Engines  | Components that store or generate data             |
+| Policies        | Rules that define who can access which paths       |
+| Tokens          | The primary method to authenticate inside of Vault |
 
 ## Sealing mechanism
 
