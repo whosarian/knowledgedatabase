@@ -105,7 +105,7 @@ In HashiCorp authentication is strictly separated from authorization.
 
 ### Human users
 
-!!! tip "Those methods are optimized for logging in manually:"
+!!! tip "Those methods are optimized for logging in manually"
 
 - Userpass: Easy username - password combination
 - LDAP / AD: Uses existing company data
@@ -114,7 +114,7 @@ In HashiCorp authentication is strictly separated from authorization.
 
 ### Machines and applications
 
-!!! tip "Those methods are made for automatization:"
+!!! tip "Those methods are made for automatization"
 
 - AppRole: Standard for machines consisting of a `RoleID` and a `SecretID`
 - Kubernetes: Pods authenticate via Service Account Token
