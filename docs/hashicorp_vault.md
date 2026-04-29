@@ -103,9 +103,7 @@ In HashiCorp authentication is strictly separated from authorization.
 - Authentication: Who are you? (auth method)
 - Authorization: What are you allowed to do? (policies)
 
-### Categories of auth methods
-
-#### Human users
+### Human users
 
 !!! tip "Those methods are optimized for logging in manually:"
 
@@ -114,7 +112,7 @@ In HashiCorp authentication is strictly separated from authorization.
 - GitHub: Authentication via a GitHub-Personal-Access-Token
 - OIDC: Login in Okta, Keycloak or Google
 
-#### Machines and applications
+### Machines and applications
 
 !!! tip "Those methods are made for automatization:"
 
