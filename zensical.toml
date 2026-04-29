@@ -47,10 +47,11 @@ Copyright &copy; 2026 The authors
 nav = [
   { "Home" = "index.md" },
   { "Basics" = [
-    "basics/certs.md",
     "basics/firewall.md",
     "basics/git.md",
+    "basics/ssh.md",
     "basics/networking.md",
+    "basics/certs.md",
     "basics/regex.md"
   ]},
   { "Linux" = [
@@ -74,7 +75,7 @@ nav = [
     "ansible/ansible_execution_environments.md"
   ]},
   { "Powershell" = "powershell.md" },
-  { "Hashicorp Vault" = "hashicorp_vault.md" }
+  { "HashiCorp Vault" = "hashicorp_vault.md" }
 ]
 
 # With the "extra_css" option you can add your own CSS styling to customize
