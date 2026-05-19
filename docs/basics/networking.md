@@ -8,17 +8,17 @@ Networks are categorized by their geographic extent. The three most important ar
 
 ## OSI Model
 
-The Open Systems Interconnection (OSI) model describes how data is transfered from an application on system A to an application on system B.
+The Open Systems Interconnection (OSI) model describes how data is transferred from an application on system A to an application on system B.
 
-| Layer | Name | Function | Protocol / Hardware |
-| --- | --- | --- | --- |
-| 7 | Application | Interface to the software (Browser, mail client) | HTTP, HTTPS, FTP, SMTP |
-| 6 | Presentation | Encryption, compression, data formatting | SSL/TLS |
-| 5 | Session | Establishing, managing and dismantling connections | NetBios, RPC |
-| 4 | Transport | End-to-end data transfer | TCP, UDP |
-| 3 | Network | Logical addressing and routing | IPv4, IPv6, ICMP |
-| 2 | Data Link | Physical addressing, error detection on cable | MAC-address, ethernet, switch |
-| 1 | Physical | Physical component | Copper cable, WLAN, hub |
+| Layer | Name         | Function                                           | Protocol / Hardware           |
+| ----- | ------------ | -------------------------------------------------- | ----------------------------- |
+| 7     | Application  | Interface to the software (Browser, mail client)   | HTTP, HTTPS, FTP, SMTP        |
+| 6     | Presentation | Encryption, compression, data formatting           | SSL/TLS                       |
+| 5     | Session      | Establishing, managing and dismantling connections | NetBios, RPC                  |
+| 4     | Transport    | End-to-end data transfer                           | TCP, UDP                      |
+| 3     | Network      | Logical addressing and routing                     | IPv4, IPv6, ICMP              |
+| 2     | Data Link    | Physical addressing, error detection on cable      | MAC-address, ethernet, switch |
+| 1     | Physical     | Physical component                                 | Copper cable, WLAN, hub       |
 
 ## Topologies
 
@@ -48,12 +48,12 @@ Every device is connected to every other device. Advantage: Maximum reliability 
 
 ## TCP vs. UDP
 
-| Attribute | TCP (Transmission Control Protocol) | UDP (User Datagram Protocol) |
-| --- | --- | --- |
-| Reliability | High: checks if data is being received | Low |
-| Connection establishment | 3-Way-Handshake (SYN, SYN-ACK, ACK) | None |
-| Speed | Slower | Very fast |
-| User cases | Websites, E-Mail, file transfer | Video streaming, online gaming, VoIP |
+| Attribute                | TCP (Transmission Control Protocol)    | UDP (User Datagram Protocol)         |
+| ------------------------ | -------------------------------------- | ------------------------------------ |
+| Reliability              | High: checks if data is being received | Low                                  |
+| Connection establishment | 3-Way-Handshake (SYN, SYN-ACK, ACK)    | None                                 |
+| Speed                    | Slower                                 | Very fast                            |
+| User cases               | Websites, E-Mail, file transfer        | Video streaming, online gaming, VoIP |
 
 ## MAC, IP & Ports
 
@@ -77,3 +77,44 @@ We do this for three reasons:
 - **Performance**: Reduction of the "broadcast domains" (less unnecessary data clutter on the network).
 - **Security** A firewall can be placed between the subnetworks.
 - **Tidiness**: IP addresses are logically grouped by department or location.
+
+## DNS (Domain Name System)
+
+The primary function of DNS is name resolution. Is translates human-readable hostnames into machine-readable IP addresses and vice versa.
+
+### Process
+
+1. Local cache / hosts-file: The client checks, if he already knows the IP or if its registered in the local `/etc/hosts` file.
+1. Local DNS server (resolver): The clients asks the in the network settings registered DNS server.
+1. Iterative request: If the local server does not find anything, the client requests the following hierarchy
+   1. Root server (`.`): Refer to the top-level domain
+   1. TLD server (`.com`, `.de`, ...): Refer to the responsible nameserver of the domain
+   1. Authoritative nameserver: Has the final answer and responds the IP
+
+### Types
+
+| Type  | Name           | Usage                                                                 | Example                                         |
+| ----- | -------------- | --------------------------------------------------------------------- | ----------------------------------------------- |
+| A     | IPv4 Address   | Assigns an IPv4 address to a name                                     | `vault.local IN A 192.168.1.50`                 |
+| AAAA  | IPv6 Address   | Assigns an IPv6 address to a name                                     | `vault.local IN AAAA 2001:db8::50`              |
+| CNAME | Canonical Name | Alias from one name to another                                        | `api.local IN CNAME vault.local`                |
+| PTR   | Pointer Record | The opposite of A: Translates an IP address into a name (Reverse DNS) | `50.1.168.192.in-addr.arpa. IN PTR vault.local` |
+| TXT   | Text           | Contains arbitrary text                                               | `local. IN TXT "v=spf1 -all"`                   |
+
+### Important Files
+
+- `/etc/hosts`: Local name resolution. Entries here override external DNS queries
+- `/etc/resolv.conf`: Determines which DNS servers the system queries
+
+### Important Commands
+
+!!! example "`dig` (Domain Information Groper)"
+    ```bash
+    dig vault.local
+    dig -x 192.168.1.50 # reverse lookup
+    ```
+
+!!! example "`nslookup`"
+    ```bash
+    nslookup google.com
+    ```
